@@ -348,6 +348,10 @@ header .navbar {
         gap: 70px;
     }
 
+    .about-section .section-content .about-details {
+        max-width: 100%;
+    }
+
     .about-section .about-image-wrapper .about-image {
         width: 100%;
         height: 100%;
