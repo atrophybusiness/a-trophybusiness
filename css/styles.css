@@ -259,6 +259,82 @@ header .navbar {
     color: var(--primary-color);
 }
 
+/* Products Section */
+.products-section {
+    color: var(--white-color);
+    background-color: var(--background-dark-color);
+    padding: 50px 0 100px;
+}
+
+.products-section .section-title {
+    color: var(--white-color);
+}
+
+.products-section .products-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 110px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.products-section .products-list .products-item {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(100% / 3 - 110px);
+    
+}
+
+.products-section .products-list .products-item .product-btn {
+    background-color: transparent;
+    color: var(--secondary-color);
+    font-size: var(--font-medium);
+    font-weight: var(--font-medium);
+    margin-top: 30px;
+    padding: 10px 26px;
+    border: 2px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.products-section .products-list .products-item .product-btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    border-color: transparent;
+}
+
+.products-section .products-list .products-item .product-image {
+    max-width: 83%;
+    aspect-ratio: 1;
+    margin-bottom: 15px;
+    object-fit: contain;
+}
+
+.products-section .products-list .products-item .text {
+    font-size: var(--font-medium);
+}
+
+/* Responsive media query for max width 1024px */
+@media screen and (max-width: 1024px) {
+    .products-section .products-list .products-item .name {
+        margin: 12px 0;
+        font-weight: var(--font-semibold);
+        font-size: var(--font-large);    
+    }
+
+    .products-section .products-list {
+        gap: 60px;
+    }
+
+    .products-section .products-list .products-item {
+        width: calc(100% / 3 - 60px);
+    }
+}
+
 /* Responsive media query for max width 900px */
 @media screen and (max-width: 900px) {
     :root {
@@ -359,5 +435,29 @@ header .navbar {
         max-height: 250px;
         aspect-ratio: 1/1;
     }
+
+    .products-section .products-list {
+        gap: 30px;
+    }
+
+    .products-section .products-list .products-item {
+        width: calc(100% / 3 - 30px);
+    }
+
+    .products-section .products-list .products-item .product-image {
+        max-width: 200px;
+    }
     
+}
+
+/* Responsive media query for max width 640px */
+
+@media screen and (max-width: 640px) {
+    .products-section .products-list {
+        gap: 60px;
+    }
+
+    .products-section .products-list .products-item {
+        width: 100%;
+    }
 }
