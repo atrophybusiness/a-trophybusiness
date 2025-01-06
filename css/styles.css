@@ -93,7 +93,7 @@ img {
 
 /*Navbar*/
 header {
-    background-color: var(--background-dark-color);
+    background-color: var(--secondary-color);
     width: 100%;
     position: fixed;
     z-index: 5;
@@ -318,6 +318,60 @@ header .navbar {
     font-size: var(--font-medium);
 }
 
+/* Testimonials Section*/
+
+.testimonials-section {
+    background-color: var(--background-light-color);
+    padding: 50px 0 100px;
+}
+
+.testimonials-section .slider-wrapper {
+    overflow: hidden;
+    margin: 0 60px 50px;
+}
+
+.testimonials-section .testimonial {
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
+    align-items: center;
+    text-align: center;
+}
+
+.testimonials-section .testimonial .user-image {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 50px;
+    border-radius: var(--border-radius-circle);
+}
+
+.testimonials-section .testimonial .name {
+    font-size: var(--font-medium);
+    margin-bottom: 16px;
+}
+
+.testimonials-section .testimonial .name .feedback {
+    line-height: 25px;
+}
+
+.testimonials-section .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    opacity: 1;
+    background: var(--primary-color);
+}
+
+.testimonials-section .swiper-slide-button {
+    margin-top: -50px;
+    color: var(--primary-color);
+    transition: .3s ease;
+}
+
+.testimonials-section .swiper-slide-button:hover {
+    color: var(--secondary-color);
+}
+
 /* Responsive media query for max width 1024px */
 @media screen and (max-width: 1024px) {
     .products-section .products-list .products-item .name {
@@ -459,5 +513,13 @@ header .navbar {
 
     .products-section .products-list .products-item {
         width: 100%;
+    }
+
+    .testimonials-section .slider-wrapper {
+        margin: 0 0 30px;
+    }
+
+    .testimonials-section .swiper-slide-button {
+        display: none;
     }
 }
