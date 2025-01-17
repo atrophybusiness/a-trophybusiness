@@ -1,0 +1,62 @@
+
+.about-section .section-content {
+    margin-top: 3rem;
+    flex-direction: column-reverse;
+}
+
+.about-section .about-details {
+    width: 100%;
+}
+
+.about-section .section-content .about-image-wrapper .about-image {
+    display: none;
+}
+
+.people-section .section-content .person-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin: 80px 0;
+}
+
+.people-section .section-content .person-container :where(.image-wrapper, .person-details) {
+    width: 50%;
+}
+
+.people-section .section-content .person-container .image-wrapper img{
+    border-radius: .5rem;
+}
+
+.people-section .section-content .person-container .person-details {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem
+}
+
+.people-section .section-content .person-container:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+
+@media screen and (max-width: 640px) {
+    .about-section .section-content .about-details {
+        width: 100%;
+    }
+
+    .people-section .section-content .person-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .people-section .section-content .person-container :where(.image-wrapper, .person-details) {
+        width: 100%;
+    }
+
+    .people-section .section-content .person-container:nth-child(even) {
+        flex-direction: column;
+    }
+}
