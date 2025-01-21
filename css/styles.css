@@ -52,10 +52,18 @@ html {
     scroll-behavior: smooth;
 }
 
+.navbar .nav-logo img {
+    width: 80px;
+    border-radius: var(--border-radius-circle);
+    background-color: var(--background-off-white);
+}
+
+
 /*Main-styles*/
 
 ul {
     list-style: none;
+    color: var(--font-dark-color);
 }
 
 a {
@@ -307,6 +315,7 @@ header .navbar {
     gap: 110px;
     align-items: center;
     justify-content: space-between;
+    color: var(--white-color);
 }
 
 .products-section .products-list .products-item {
