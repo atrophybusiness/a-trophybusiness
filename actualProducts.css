@@ -1,0 +1,209 @@
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.firstRowCategory {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    position: relative;
+    overflow: visible;
+}
+
+.category1, .category2, .category3, .category4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #032d3d;
+    border-radius: 8px;
+    width: 250px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    box-shadow: 10px 10px 10px;
+    transition: all 0.5s ease;
+}
+
+.category1:hover, .category2:hover, .category3:hover, .category4:hover {
+    cursor: pointer;
+    transform: scale(0.95);
+    box-shadow: 10px 10px 10px rgba(231, 76, 60, 0.9);
+}
+
+.secondRowCategory {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.otherProductsSection {
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    margin-top: 25px;
+    flex-direction: column;
+    text-align: center;
+}
+
+.otherProductsSection .text {
+    width: 50%;
+}
+
+.otherProductsSection .section-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+}
+
+.services {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+  }
+  
+.service-item1, .service-item2, .service-item3, .service-item4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    padding: 10px;
+    font-size: 23px;
+    border: 1px solid #032d3d;
+    border-radius: 8px;
+}
+  
+.service-item1 img, .service-item2 img, .service-item3 img, .service-item4 img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px; /* Optional, adds rounded corners to the images */
+    object-fit: cover; /* Ensures the images cover the area without stretching */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.service-item1:hover, .service-item2:hover, .service-item3:hover, .service-item4:hover {
+    animation: pulse 0.8s ease-in-out infinite;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.pulse {
+    animation: pulse 0.8s ease-in-out 2;
+  }
+
+.fedex {
+    display: flex;
+}
+
+.garment {
+    display: flex;
+}
+
+.laser {
+    display: flex;
+}
+
+.embroidery {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+
+    .pageContainer {
+        border-width: 1px;
+        border-style: solid;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .awardCategoryText {
+        font-size: 18px; /* Adjust font size for smaller screens */
+        text-align: center;
+        width: fit-content;
+        width: auto; /* Make sure the width fits the content */
+        max-width: 90%;
+    }
+
+    .firstRowCategory, .secondRowCategory {
+        flex-direction: column; /* Stack categories vertically */
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        margin: 10px;
+    }
+
+    .category1 img, .category2 img, .category3 img, .category4 img {
+        height: 300px; /* Adjust image height for smaller screens */
+        width: 200px; /* Make the images responsive */
+    }
+
+    .otherProductsSection {
+        border-style: solid;
+        border-width: 5px;
+        /* border-color: #e74c3c; */
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 12px;
+        margin-top: 25px;
+        width: 100%; /* Make sure it takes up full width */
+        box-sizing: border-box; /* Include padding in the width calculation */
+        max-width: 90%; /* Limit the width to 90% of the screen size */
+        margin-left: auto; /* Center horizontally */
+        margin-right: auto; /* Center horizontally */
+    }
+
+    .text label {
+        font-size: 24px; /* Adjust font size for readability */
+        padding: 0 20px; /* Adjust padding for smaller screens */
+    }
+
+    .text h1 {
+        font-size: 30px; /* Adjust font size for mobile screens */
+    }
+
+    .services {
+        gap: 10px; /* Reduce gap between service items */
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .service-item1, .service-item2, .service-item3, .service-item4 {
+        width: 75%; /* Make each service item full-width */
+        font-size: 16px; /* Adjust font size for mobile */
+        padding: 15px; /* Add some padding for better touch targets */
+    }
+
+    .service-item1 img, .service-item2 img, .service-item3 img, .service-item4 img {
+        width: 150px; /* Reduce image size for mobile */
+        height: 150px;
+    }
+}

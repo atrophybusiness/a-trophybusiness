@@ -1,0 +1,265 @@
+.PageContainer {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ImagesContainer {
+    display: flex;
+    background-color: #032d3d;
+}
+
+.content-container .tab-content {
+    display: none;
+}
+
+.horizontal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.backHome {
+    position: absolute;
+    left: 150px;
+    text-decoration: underline;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.backHome:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+
+.TitleText {
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 12px;
+    border-color: #032d3d;
+    width: 800px;
+    margin-bottom: 25px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 21px;
+    box-shadow: 0 6px 12px #032d3d;
+    padding: 5px;
+}
+
+.TitleText h1 {
+    margin-bottom: 15px;
+}
+
+.instructions {
+    display: flex;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.steps {
+    display: flex;
+    gap: 20px;
+}
+
+/* Individual step container */
+.step {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px #032d3d;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px #032d3d;
+}
+
+/* Step number style */
+.step-number {
+    width: 40px;
+    height: 40px;
+    background-color: #032d3d;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+/* Step content */
+.step-content h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.step-content p {
+    font-size: 1.15rem;
+    color: #666;
+    margin: 0;
+}
+
+
+.content-container .tab-content.active {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-style: solid;
+    border-width: 5px;
+    border-top: none;
+    border-bottom: none;
+    padding: 5px;
+    width: 80%;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tab-content > .Image {
+    width: calc(25% - 20px); /* Each item takes 25% of the width, minus the gap (20px) */
+    box-sizing: border-box; /* Ensures padding and border are included in the width */
+}
+
+.tab-button {
+    width: 180px;                 /* Fixed width for all buttons */
+    height: 55px;                 /* Fixed height for all buttons */
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    border-radius: 25px;          /* Rounded corners */
+    color: #032d3d;                  /* Darker text color */
+    font-size: 16px;
+    font-weight: bold;              /* Font size for consistency */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tab-button:hover {
+    background-color: #63a4e9;    /* Optional: Change background on hover */
+}
+
+.tab-button.active {
+    background-color: #63a4e9;
+    color: white;
+    border-color: #007bff;
+}
+
+.Filter {
+    display: flex;
+    padding: 5px;
+    margin-bottom: 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.Image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Image img {
+    height: 250px;
+    width: 250px;
+}
+
+.Image:hover {
+    cursor: pointer;
+    box-shadow: 4px 4px 10px;
+}
+
+.Filter h2 {
+    font-size: 30px;
+}
+
+@media (max-width: 768px) {
+
+    .PageContainer {
+        padding: 20px;
+    }
+
+    /* Adjust Title text for smaller screens */
+    .TitleText {
+        width: 90%;
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .TitleText h1 {
+        font-size: 24px;
+    }
+
+    .instructions {
+        flex-direction: column;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .steps {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .step {
+        padding: 15px;
+    }
+
+    .step-number {
+        width: 35px;
+        height: 35px;
+        font-size: 1.25rem;
+        margin-right: 15px;
+    }
+
+    .step-content h3 {
+        font-size: 1.25rem;
+    }
+
+    .step-content p {
+        font-size: 1rem;
+    }
+
+    .tab-button {
+        width: 100%;
+        font-size: 14px;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+
+    .Filter {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .backHome {
+        display: none;
+    }
+
+    .content-container .tab-content.active {
+        width: 90%; /* Increase width for better spacing on smaller screens */
+        padding: 10px;
+    }
+
+    .tab-content > .Image {
+        width: calc(50% - 20px); /* Two items per row on tablet-sized screens */
+    }
+
+    .Image img {
+        height: 150px;
+        width: 150px;
+    }
+}
