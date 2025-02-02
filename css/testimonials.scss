@@ -26,11 +26,11 @@
 //   }
 // }
 
-section {
+.testimonials {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   width: calc(min(90rem, 85%));
-  margin: 0 auto;
+  margin: 0 auto 15rem auto;
 
   @include mQ(61.25rem) {
     column-gap: 5rem;
