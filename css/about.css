@@ -39,6 +39,10 @@
     --site-max-width: 1200px;
 }
 
+/* main {
+    
+} */
+
 
 .about-section {
     background-color: var(--white-color);
@@ -46,6 +50,7 @@
 
 .about-section .section-content {
     flex-direction: column-reverse;
+    margin-top: 5rem;
 }
 
 .about-section .about-details {

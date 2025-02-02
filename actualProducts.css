@@ -3,6 +3,10 @@
     flex-direction: column;
 }
 
+.pageContainer .awardCategoryText {
+    margin-top: 10rem;
+}
+
 .firstRowCategory {
     margin: 20px;
     display: flex;
