@@ -397,7 +397,7 @@ header .navbar {
       margin-bottom: 10px;
     }
   
-    p {
+    .text {
       font-size: 1rem;
       color: var(--background-dark-grey);
       margin-bottom: 20px;
