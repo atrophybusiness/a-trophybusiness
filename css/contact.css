@@ -123,3 +123,10 @@
     }
     
 }
+
+/* Responsive media query for max width 1024px */
+@media screen and (max-width: 1024px) {
+    .contact-section h2 {
+        margin-top: 10rem;
+    }
+}
