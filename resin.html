@@ -105,7 +105,6 @@
         <button class="tab-button" data-tab="1">Completed Cups</button>
         <button class="tab-button" data-tab="2">Free Standing</button>
         <button class="tab-button" data-tab="3">Sports Balls</button>
-        <button class="tab-button" data-tab="4">Clear</button>
       </div>
     </div>
     <div class="ImagesContainer">
@@ -966,69 +965,56 @@
             <label>$45.75</label>
           </div>
         </div>
-        <div class="tab-content" id="content-4">
-          <div class="Image">
-            <img src="Resin/DB13--1b89a37d.jpg" alt="fire" />
-            <label>Flame Glass Award on Glass Base</label>
-            <label>$45.75</label>
-          </div>
-          <div class="Image">
-            <img src="Resin/DB14--33bf62b8.jpg" alt="fire" />
-            <label>Flame Glass Award on Glass Base</label>
-            <label>$45.75</label>
-          </div>
-          <div class="Image">
-            <img src="Resin/DB15--520dc8ba.jpg" alt="fire" />
-            <label>Flame Glass Award on Glass Base</label>
-            <label>$45.75</label>
-          </div>
-          <div class="Image">
-            <img src="Resin/DB16--c3d08f9d.jpg" alt="fire" />
-            <label>Flame Glass Award on Glass Base</label>
-            <label>$45.75</label>
-          </div>
-          <div class="Image">
-            <img src="Resin/DB17--cb7b5c28.jpg" alt="fire" />
-            <label>Flame Glass Award on Glass Base</label>
-            <label>$45.75</label>
-          </div>
-          <div class="Image">
-            <img src="Resin/DB63--63e4b248.jpg" alt="fire" />
-            <label>Flame Glass Award on Glass Base</label>
-            <label>$45.75</label>
-          </div>
-          <div class="Image">
-            <img src="Resin/DB64--4f712f47.jpg" alt="fire" />
-            <label>Flame Glass Award on Glass Base</label>
-            <label>$45.75</label>
-          </div>
-          <div class="Image">
-            <img src="Resin/DB65--8d920d3c.jpg" alt="fire" />
-            <label>Flame Glass Award on Glass Base</label>
-            <label>$45.75</label>
-          </div>
-          <div class="Image">
-            <img src="Resin/DB66--3d51e729.jpg" alt="fire" />
-            <label>Flame Glass Award on Glass Base</label>
-            <label>$45.75</label>
-          </div>
-          <div class="Image">
-            <img src="Resin/FB101--73114bda.jpg" alt="fire" />
-            <label>Flame Glass Award on Glass Base</label>
-            <label>$45.75</label>
-          </div>
-          <div class="Image">
-            <img src="Resin/FB102--5880be3d.jpg" alt="fire" />
-            <label>Flame Glass Award on Glass Base</label>
-            <label>$45.75</label>
-          </div>
-          <div class="Image">
-            <img src="Resin/FB103--2658dd4f.jpg" alt="fire" />
-            <label>Flame Glass Award on Glass Base</label>
-            <label>$45.75</label>
-          </div>
-        </div>
       </div>
+    </div>
+
+    <footer class="footer-section">
+      <div class="section-content">
+        <p class="copyright-text">&copy; 2025 A Trophy Business</p>
+
+        <div class="social-link-list">
+          <a href="#" class="social-link"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="#" class="social-link"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="#" class="social-link"
+            ><i class="fa-brands fa-square-x-twitter"></i
+          ></a>
+        </div>
+
+        <nav class="site-map">
+          <a href="./index.html" class="site-map-link">Home</a>
+          <a href="./about.html" class="site-map-link">About Us</a>
+          <a href="./actualProducts.html" class="site-map-link">Products</a>
+          <a href="./testimonials.html" class="site-map-link">Testimonials</a>
+          <a href="./gallery.html" class="site-map-link">Gallery</a>
+          <a href="./contacts.html" class="site-map-link">Contact Us</a>
+        </nav>
+
+        <p class="policy-text">
+          <a href="#" class="policy-link">Privacy Policy</a>
+          <span class="separator"></span>
+          <a href="#" class="policy-link">Refund Service</a>
+        </p>
+      </div>
+    </footer>
+
+    <div class="contact-form-container" style="display: none;">
+      <form class="contact-form">
+        <h2>Ask Us About This Product!</h2>
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email Address" required>
+        <textarea id="message" placeholder="Your Message"></textarea>
+        <input type="hidden" id="productName">
+        <input type="hidden" id="productImage">
+        <input type="hidden" id="productPrice">
+        
+        <!-- Submit Button -->
+        <button type="submit" class="submit-button">Show Me My Email</button>
+        <button type="button" class="close-button" onclick="closeForm()">Close Form</button>
+      </form>
     </div>
 
     <script src="tabs.js"></script>

@@ -690,6 +690,56 @@
         </div>
       </div>
     </div>
+
+    <footer class="footer-section">
+      <div class="section-content">
+        <p class="copyright-text">&copy; 2025 A Trophy Business</p>
+
+        <div class="social-link-list">
+          <a href="#" class="social-link"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="#" class="social-link"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="#" class="social-link"
+            ><i class="fa-brands fa-square-x-twitter"></i
+          ></a>
+        </div>
+
+        <nav class="site-map">
+          <a href="./index.html" class="site-map-link">Home</a>
+          <a href="./about.html" class="site-map-link">About Us</a>
+          <a href="./actualProducts.html" class="site-map-link">Products</a>
+          <a href="./testimonials.html" class="site-map-link">Testimonials</a>
+          <a href="./gallery.html" class="site-map-link">Gallery</a>
+          <a href="./contacts.html" class="site-map-link">Contact Us</a>
+        </nav>
+
+        <p class="policy-text">
+          <a href="#" class="policy-link">Privacy Policy</a>
+          <span class="separator"></span>
+          <a href="#" class="policy-link">Refund Service</a>
+        </p>
+      </div>
+    </footer>
+
+    <div class="contact-form-container" style="display: none;">
+      <form class="contact-form">
+        <h2>Ask Us About This Product!</h2>
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email Address" required>
+        <textarea id="message" placeholder="Your Message"></textarea>
+        <input type="hidden" id="productName">
+        <input type="hidden" id="productImage">
+        <input type="hidden" id="productPrice">
+        
+        <!-- Submit Button -->
+        <button type="submit" class="submit-button">Show Me My Email</button>
+        <button type="button" class="close-button" onclick="closeForm()">Close Form</button>
+      </form>
+    </div>
+    
     <script src="tabs.js"></script>
   </body>
 </html>
