@@ -77,8 +77,11 @@
         <div class="category3" onclick="window.location.href='medals.html';">
           <img src="CategoryImages/medals.png" />
         </div>
-        <div class="category3">
+        <div class="category5">
           <img src="CategoryImages/apparel.png" />
+          <div class="slide-in-content">
+            <h2>More Information Coming Soon!</h2>
+          </div>
         </div>
       </div>
     </div>
@@ -121,6 +124,30 @@
         </div>
       </div>
     </section>
+
+    <!--Added Email Form for other services ZW-->
+    <div class="contact-form-container" style="display: none">
+      <form class="contact-form">
+        <h2>Ask Us About This Service!</h2>
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input
+          type="email"
+          id="email"
+          placeholder="Your Email Address"
+          required
+        />
+        <textarea id="message" placeholder="Your Message"></textarea>
+        <input type="hidden" id="productName" />
+        <input type="hidden" id="productImage" />
+        <input type="hidden" id="productPrice" />
+        <input type="hidden" id="serviceName" name="serviceName" />
+        <button type="submit" class="submit-button">Show Me My Email</button>
+        <button type="button" class="close-button" onclick="closeForm()">
+          Close Form
+        </button>
+      </form>
+    </div>
+
     <!-- Footer Section -->
     <footer class="footer-section">
       <div class="section-content">
