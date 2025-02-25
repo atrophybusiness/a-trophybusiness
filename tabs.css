@@ -241,6 +241,7 @@
 
     .PageContainer {
         padding: 20px;
+        padding-top: 180px;
     }
 
     /* Adjust Title text for smaller screens */

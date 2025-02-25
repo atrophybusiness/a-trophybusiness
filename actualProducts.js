@@ -10,7 +10,7 @@ function isInViewport(el) {
 
 // Add a scroll event listener to trigger the pulse animation
 window.addEventListener('scroll', () => {
-  const serviceItems = document.querySelectorAll('.service-item1, .service-item2, .service-item3, .service-item4');
+  const serviceItems = document.querySelectorAll('.service-item1, .service-item2, .service-item3, .service-item4, .service-item5');
   
   serviceItems.forEach(item => {
     if (isInViewport(item) && !item.classList.contains('pulsed')) {
@@ -25,7 +25,7 @@ window.addEventListener('scroll', () => {
 
 // Added Scripting For Email Form ZW
 
-const serviceItems = document.querySelectorAll('.services .service-item1, .services .service-item2, .services .service-item3, .services .service-item4');
+const serviceItems = document.querySelectorAll('.services .service-item1, .services .service-item2, .services .service-item3, .services .service-item4, .services .service-item5');
 
 serviceItems.forEach(item => {
 item.addEventListener('click', function() {
@@ -47,7 +47,7 @@ const message = document.querySelector('#message').value;
 
 const serviceName = document.querySelector('#serviceName').value;
 
-const ownerEmail = "teribair12@gmail.com";
+const ownerEmail = "zach.woodson03@gmail.com"; // Change this to the actual owner's email
 
 const emailBody = `Service I'm Interested In: ${serviceName}\n\nMessage: ${message}`;
 

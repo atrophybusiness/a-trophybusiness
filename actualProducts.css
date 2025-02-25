@@ -119,7 +119,7 @@
     padding: 10px;
   }
   
-.service-item1, .service-item2, .service-item3, .service-item4 {
+.service-item1, .service-item2, .service-item3, .service-item4, .service-item5 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -131,7 +131,7 @@
     border-radius: 8px;
 }
   
-.service-item1 img, .service-item2 img, .service-item3 img, .service-item4 img {
+.service-item1 img, .service-item2 img, .service-item3 img, .service-item4 img, .service-item5 img {
     width: 200px;
     height: 200px;
     border-radius: 10px; /* Optional, adds rounded corners to the images */
@@ -150,7 +150,7 @@
     }
 }
 
-.service-item1:hover, .service-item2:hover, .service-item3:hover, .service-item4:hover {
+.service-item1:hover, .service-item2:hover, .service-item3:hover, .service-item4:hover, .service-item5:hover {
     animation: pulse 0.8s ease-in-out infinite;
     font-weight: bold;
     cursor: pointer;
@@ -230,8 +230,6 @@
 @media (max-width: 768px) {
 
     .pageContainer {
-        border-width: 1px;
-        border-style: solid;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -247,15 +245,15 @@
 
     .firstRowCategory, .secondRowCategory {
         flex-direction: column; /* Stack categories vertically */
-        align-items: center;
-        justify-content: center;
+        /* align-items: center;
+        justify-content: center; */
         gap: 15px;
         margin: 10px;
     }
 
     .category1 img, .category2 img, .category3 img, .category4 img {
         height: 300px; /* Adjust image height for smaller screens */
-        width: 200px; /* Make the images responsive */
+        width: 300px; /* Make the images responsive */
     }
 
     .otherProductsSection {
@@ -276,6 +274,15 @@
         margin-right: auto; /* Center horizontally */
     }
 
+    .services {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px; /* Reduce gap between service items */
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
     .text label {
         font-size: 24px; /* Adjust font size for readability */
         padding: 0 20px; /* Adjust padding for smaller screens */
@@ -283,12 +290,6 @@
 
     .text h1 {
         font-size: 30px; /* Adjust font size for mobile screens */
-    }
-
-    .services {
-        gap: 10px; /* Reduce gap between service items */
-        flex-direction: column;
-        margin-top: 10px;
     }
 
     .service-item1, .service-item2, .service-item3, .service-item4 {

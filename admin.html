@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Nyasha Julius Choga" />
+    <title>Admin - A Trophy Business</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        loadContent();
+        makeEditable();
+      });
+
+      function makeEditable() {
+        document
+          .querySelectorAll("h1, h2, h3, h4, p, span")
+          .forEach((el, index) => {
+            el.contentEditable = "true";
+            el.classList.add("editable");
+            el.setAttribute("data-id", "editable-" + index);
+          });
+      }
+
+      function saveChanges() {
+        let contentData = {};
+        document.querySelectorAll(".editable").forEach((el) => {
+          contentData[el.getAttribute("data-id")] = el.innerHTML;
+        });
+        localStorage.setItem("pageContent", JSON.stringify(contentData));
+        alert("Changes saved!");
+      }
+
+      function loadContent() {
+        let savedContent = localStorage.getItem("pageContent");
+        if (savedContent) {
+          let contentData = JSON.parse(savedContent);
+          document.querySelectorAll(".editable").forEach((el) => {
+            let key = el.getAttribute("data-id");
+            if (contentData[key]) {
+              el.innerHTML = contentData[key];
+            }
+          });
+        }
+      }
+    </script>
+    <style>
+      .editable {
+        border: 1px dashed #000;
+        padding: 5px;
+      }
+      .admin-controls {
+        text-align: center;
+        margin: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar section-content">
+        <a href="#" class="nav-logo">
+          <img src="./assets/images/a-trophy-bus-logo.png" alt="" />
+        </a>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="actualProducts.html" class="nav-link">Products</a>
+          </li>
+          <li class="nav-item">
+            <a href="testimonials.html" class="nav-link">Testimonials</a>
+          </li>
+          <li class="nav-item">
+            <a href="gallery.html" class="nav-link">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a href="contacts.html" class="nav-link contact-link">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero-section">
+        <div class="section-content">
+          <div class="hero-details">
+            <h2 class="title hero-title editable">A Trophy Business</h2>
+            <h3 class="subtitle editable">
+              Honoring Achievements, Celebrating Excellence.
+            </h3>
+            <p class="description editable">
+              Our mission is to provide high-quality, affordable, and durable
+              products...
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section" id="about">
+        <h2 class="section-title editable">About Us</h2>
+        <p class="text editable">
+          We started our business in 2005 with trophies, plaques, and
+          engraving...
+        </p>
+      </section>
+
+      <div class="admin-controls">
+        <button onclick="saveChanges()">Save Changes</button>
+      </div>
+    </main>
+  </body>
+</html>
